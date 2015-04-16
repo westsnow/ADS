@@ -36,7 +36,7 @@ import java.util.*;
 public class DijkstraAlgm {
 	public int solution(Graph graph, Vertex s, Vertex end, LinkedList<Vertex> path){
 		LinkedList<Vertex> vertices = graph.getVertices();
-		HashMap<Vertex, Integer> dist = new HashMap<Vertex, Integer>();
+		final HashMap<Vertex, Integer> dist = new HashMap<Vertex, Integer>();
 		for(Vertex v: vertices){
 			dist.put(v, Integer.MAX_VALUE);
 		}
