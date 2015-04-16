@@ -39,7 +39,7 @@ import java.util.*;
 public class DijkstraAlgm2 {
 	//			new DijDijkstraAlgm().getSSPNextHop(g, g.getVertex(nodeId), nextHops);
 	public void getSSPNextHop(Graph graph, Vertex s, int[] nextHops){
-		HashMap<Vertex, Integer> dist = new HashMap<Vertex, Integer>();
+		final HashMap<Vertex, Integer> dist = new HashMap<Vertex, Integer>();
 		LinkedList<Vertex> vertices = graph.getVertices();
 		for(Vertex v: vertices){
 			dist.put(v, Integer.MAX_VALUE);
@@ -83,7 +83,7 @@ public class DijkstraAlgm2 {
 	
 	
 	public int solution(Graph graph, Vertex s, Vertex end, LinkedList<Vertex> path,
-			HashMap<Vertex, Integer> dist){
+		final HashMap<Vertex, Integer> dist){
 		LinkedList<Vertex> vertices = graph.getVertices();
 		for(Vertex v: vertices){
 			dist.put(v, Integer.MAX_VALUE);
